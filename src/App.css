@@ -1,0 +1,137 @@
+.App {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the container to fill the viewport */
+  background: #120f1f;
+}
+body {
+  background-color: black; /* Change to your desired background color */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.play-games{
+  text-align: center;
+  color: white;
+}
+.content {
+  padding: 20px;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add spacing between images */
+  padding: 20px; /* Add padding to create space around the images */
+  background-color: rgb(28, 28, 28); /* Add background color to create the rounded rectangle */
+  border-radius: 10px; /* Add border-radius to create rounded corners */
+}
+
+.image-container img {
+  width: 300px; /* Adjust the width of the images */
+  height: auto;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow effect */
+  transition: box-shadow 0.3s ease; /* Add smooth transition */
+  border-radius: 10px; /* Ensure images have rounded corners */
+}
+
+.image-container img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+}
+img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  color: white;
+  font-size: 12px;
+  z-index: 999; /* Ensure it's above the iframe */
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.modal iframe {
+  width: 100%;
+  height: 80vh; /* Increase the height of the iframe */
+  border: none;
+}
+
+.modal button {
+  display: block;
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title-bar {
+  background-color: transparent;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: fixed; /* Fix the title bar at the top */
+  top: 0; /* Ensure the title bar starts at the top of the viewport */
+  width: 99%; /* Make the title bar span the full width of the viewport */
+  z-index: 1000; /* Ensure the title bar appears above other content */
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: auto; /* Move the logo to the top left */
+}
+
+.navigation {
+  margin-left: auto;
+  padding: 10px;
+  font-size:larger;
+}
+
+.navigation a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
