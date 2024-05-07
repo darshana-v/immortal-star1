@@ -10,7 +10,7 @@ import TrailerPlayer from './TrailerPlayer';
 // Import other components and images here
 
 const images = [
-  { id: 1, url: image1, website: 'https://3.7.235.231:8080/' },
+  { id: 1, url: image1, website: 'http://3.7.235.231:8080/' },
   { id: 2, url: image2, website: 'https://cdn.htmlgames.com/PegSolitaire/' },
   { id: 3, url: image3, website: 'https://cdn.htmlgames.com/SoldierAttack1/' },
   { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
