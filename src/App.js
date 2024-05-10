@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Slider from 'react-slick'
 import image1 from './minesweeper.png';
-import image2 from './solitare.jpg';
+import image2 from './Tdm_logo_bbg.jpg';
 import image3 from './soldier-attack-1.png'
 import image4 from './writtenrealms.png';
 import TitleBar from './TitleBar';
@@ -11,7 +11,7 @@ import TrailerPlayer from './TrailerPlayer';
 
 const images = [
   { id: 1, url: image1, website: 'http://3.7.235.231:8080/' },
-  { id: 2, url: image2, website: 'https://cdn.htmlgames.com/PegSolitaire/' },
+  { id: 2, url: image2, website: 'https://appstream2.us-east-2.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiQURNSU4iLCJleHBpcmVzIjoiMTcxNTM1NTQ1OSIsImF3c0FjY291bnRJZCI6IjczMDMzNTQ3NTE1NiIsInVzZXJJZCI6ImFkbWluIiwiY2F0YWxvZ1NvdXJjZSI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QiLCJmbGVldFJlZiI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QifQ%3D%3D&signature=E5B2vrlVOfg6r%2BImgYPkxemx5hwYV7GLrwhWFkoePG8%3D' },
   { id: 3, url: image3, website: 'https://cdn.htmlgames.com/SoldierAttack1/' },
   { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
   // Add more images here
