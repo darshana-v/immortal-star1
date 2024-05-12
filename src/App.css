@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Set the height of the container to fill the viewport */
-  background: #120f1f;
+  background: #000000;
 }
 body {
   background-color: black; /* Change to your desired background color */
@@ -49,6 +49,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  padding: 10px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
   z-index: 999;
@@ -84,7 +85,7 @@ img {
 
 .modal iframe {
   width: 100%;
-  height: 80vh; /* Increase the height of the iframe */
+  height: 77vh; /* Increase the height of the iframe */
   border: none;
 }
 
@@ -134,4 +135,53 @@ img {
 
 .navigation a:hover {
   text-decoration: underline;
+}
+.episode-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.episode-modal {
+  position: fixed;
+  top: 20px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+.episode-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.episode-modal-close-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.episode-modal-close-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.close-button{
+  position: absolute;
+      top: 10px;
+      right: 5px;
 }

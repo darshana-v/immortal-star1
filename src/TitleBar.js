@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from './oie_transparent.png'
+import image1 from './Images/oie_transparent.png'
 
 function TitleBar() {
   return (

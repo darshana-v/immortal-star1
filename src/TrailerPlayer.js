@@ -53,7 +53,6 @@ class TrailerPlayer extends React.Component {
           <YouTube videoId={videoId} opts={opts} className="fullscreen-video" />
           <div className="overlay-text"><p> <h4>The Dark Mod Episodes: Now Available!</h4></p> 
           <p><h5>Play your favorite games as episodes, now on Immortal Star!</h5></p> 
-          <button className="play-button">Play Now</button>
           </div>
         </div>
       );
