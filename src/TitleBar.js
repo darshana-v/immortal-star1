@@ -7,8 +7,7 @@ function TitleBar() {
       <img src = {image1} alt="Immortal Star Logo" className="logo" />
       <div className="navigation">
         <a href="#">Home</a>
-        <a href="#">TV Shows</a>
-        <a href="#">Movies</a>
+        <a href="https://www.immortalstar.one/">What is this all about?</a>
       </div>
     </div>
   );

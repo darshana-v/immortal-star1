@@ -4,12 +4,36 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Function to display a message if the device is mobile
+function displayMobileMessage() {
+    const message = document.createElement('div');
+    message.textContent = "Sorry, this website is not optimized for mobile devices.";
+    message.style.position = 'fixed';
+    message.style.top = '50%';
+    message.style.left = '50%';
+    message.style.transform = 'translate(-50%, -50%)';
+    message.style.background = 'white';
+    message.style.padding = '20px';
+    message.style.border = '2px solid black';
+    message.style.borderRadius = '10px';
+    message.style.zIndex = '9999';
+    document.body.appendChild(message);
+}
+
+// Check if the user agent indicates a mobile device
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// Check if the device is mobile and display the message
+if (isMobile) {
+    displayMobileMessage();
+} else {
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+    );
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import image1 from './Images/minesweeper.png';
 import image2 from './Images/Tdm_logo_bbg.jpg';
-import image3 from './Images/soldier-attack-1.png';
+import image3 from './Images/hauntedschool.png';
 import image4 from './Images/writtenrealms.png';
+import image5 from './Images/kuzbass.jpg';
+import image6 from './Images/youarebeingwatched.png';
+import image7 from './Images/deadlandsurvival.png'
 import TitleBar from './TitleBar';
 import TrailerPlayer from './TrailerPlayer';
 import FullScreenButton from './FullScreenButton';
@@ -14,11 +17,11 @@ import EpisodeModal from './EpisodeModal';
 const images = [
   { id: 1, url: image1, website: 'http://3.7.235.231:8080/' },
   { id: 2, url: image2, website: 'https://appstream2.us-east-2.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiQURNSU4iLCJleHBpcmVzIjoiMTcxNTQ1MDI1MSIsImF3c0FjY291bnRJZCI6IjczMDMzNTQ3NTE1NiIsInVzZXJJZCI6ImFkbWluIiwiY2F0YWxvZ1NvdXJjZSI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QiLCJmbGVldFJlZiI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QifQ%3D%3D&signature=0aXXuOrffG%2Bljz67Zl0LtPr3QVzTkeYpdzaYDFBI3mU%3D' },
-  { id: 3, url: image3, website: 'https://cdn.htmlgames.com/SoldierAttack1/' },
+  { id: 3, url: image3, website: 'https://www.crazygames.com/embed/haunted-school---horror-game' },
   { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
-  { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
-  { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
-  { id: 4, url: image4, website: 'https://writtenrealms.com/game' },  { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
+  { id: 5, url: image5, website: 'https://www.crazygames.com/embed/kuzbass-horror' },
+  { id: 6, url: image6, website: 'https://www.crazygames.com/embed/you-are-being-watched---horror-game' },
+  { id: 7, url: image7, website: 'https://www.crazygames.com/embed/dead-land-survival' },
   
   // Add more images here
 ];
@@ -38,7 +41,7 @@ const App = () => {
   const handleEpisodeClick = () => {
     setShowEpisodeModal(true);
     // Set selected episode
-    setSelectedEpisode({ title: "Episode Title", description: "Episode Description" });
+    setSelectedEpisode({ title: "Waitlist Now!", description: "" });
   };
 
   const toggleFullScreen = () => {
@@ -104,7 +107,7 @@ const App = () => {
         <TrailerPlayer />
         <button className="play-button" onClick={handleEpisodeClick}>Play Now</button> 
         <div className="play-games">
-          <h1>Check out some other games!</h1>
+          <h1>Check out these games while you're here!</h1>
         </div>
         <div className="content">
         <div className="image-container">

@@ -31,13 +31,14 @@ body {
 }
 
 .image-container img {
-  width: 250px;
+  width: 15%;
   height: auto;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   border-radius: 10px;
   animation: scroll 20s linear infinite; /* Adjust animation duration as needed */
+  image-rendering: pixelated;
 }
 
 @keyframes scroll {

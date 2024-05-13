@@ -51,7 +51,7 @@ class TrailerPlayer extends React.Component {
     return (
         <div className="trailer-player-container">
           <YouTube videoId={videoId} opts={opts} className="fullscreen-video" />
-          <div className="overlay-text"><p> <h4>The Dark Mod Episodes: Now Available!</h4></p> 
+          <div className="overlay-text"><p> <h4>The Dark Mod Episodes: Coming Soon!</h4></p> 
           <p><h5>Play your favorite games as episodes, now on Immortal Star!</h5></p> 
           </div>
         </div>
