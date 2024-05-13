@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import image1 from './Images/minesweeper.png';
-import image2 from './Images/Tdm_logo_bbg.jpg';
+import image1 from './Images/hanselandgretel.png';
+import image2 from './Images/shadowpresident.png';
 import image3 from './Images/hauntedschool.png';
 import image4 from './Images/writtenrealms.png';
 import image5 from './Images/kuzbass.jpg';
@@ -13,10 +13,13 @@ import FullScreenButton from './FullScreenButton';
 import EpisodeModal from './EpisodeModal';
 
 // Import other components and images here
+/* AWS Links that has got to work 
+ { id: 1, url: image1, website: 'http://3.7.235.231:8080/' },
+  { id: 2, url: image2, website: 'https://appstream2.us-east-2.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiQURNSU4iLCJleHBpcmVzIjoiMTcxNTQ1MDI1MSIsImF3c0FjY291bnRJZCI6IjczMDMzNTQ3NTE1NiIsInVzZXJJZCI6ImFkbWluIiwiY2F0YWxvZ1NvdXJjZSI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QiLCJmbGVldFJlZiI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QifQ%3D%3D&signature=0aXXuOrffG%2Bljz67Zl0LtPr3QVzTkeYpdzaYDFBI3mU%3D' } */
 
 const images = [
-  { id: 1, url: image1, website: 'http://3.7.235.231:8080/' },
-  { id: 2, url: image2, website: 'https://appstream2.us-east-2.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiQURNSU4iLCJleHBpcmVzIjoiMTcxNTQ1MDI1MSIsImF3c0FjY291bnRJZCI6IjczMDMzNTQ3NTE1NiIsInVzZXJJZCI6ImFkbWluIiwiY2F0YWxvZ1NvdXJjZSI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QiLCJmbGVldFJlZiI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QifQ%3D%3D&signature=0aXXuOrffG%2Bljz67Zl0LtPr3QVzTkeYpdzaYDFBI3mU%3D' },
+  { id: 1, url: image1, website: 'https://www.crazygames.com/embed/gretel-and-hansel' },
+  { id: 2, url: image2, website: 'https://www.crazygames.com/embed/shadow-president-illuminati' },
   { id: 3, url: image3, website: 'https://www.crazygames.com/embed/haunted-school---horror-game' },
   { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
   { id: 5, url: image5, website: 'https://www.crazygames.com/embed/kuzbass-horror' },
@@ -105,7 +108,7 @@ const App = () => {
       <TitleBar />
       <div className="main-content">
         <TrailerPlayer />
-        <button className="play-button" onClick={handleEpisodeClick}>Play Now</button> 
+        <button className="play-button" onClick={handleEpisodeClick}>Coming Soon!</button> 
         <div className="play-games">
           <h1>Check out these games while you're here!</h1>
         </div>
