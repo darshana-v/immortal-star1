@@ -1,19 +1,21 @@
+// EpisodeModal.js
 import React from 'react';
 
-const EpisodeModal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
+const EpisodeModal = ({ isOpen, handleClose, episode }) => {
   return (
-    <div className="episode-modal">
-      <div className="episode-modal-content">
-        <h2 className="episode-modal-title">Episode Modal</h2>
-        <p>This is a simple episode modal.</p>
-        <div className="episode-modal-buttons">
-          <button className="episode-modal-close-btn" onClick={onClose}>Close</button>
+    isOpen && (
+      <div className="episode-modal">
+        <div className="episode-modal-content">
+          <h2 className="episode-modal-title">{episode.title}</h2>
+          <p>{episode.description}</p>
+          {/* Add additional information here */}
+          <div className="episode-modal-buttons">
+            <button className="episode-modal-close-btn" onClick={handleClose}>Close</button>
+          </div>
         </div>
       </div>
-    </div>
+    )
   );
-}
+};
 
 export default EpisodeModal;

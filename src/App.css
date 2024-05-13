@@ -2,41 +2,51 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set the height of the container to fill the viewport */
+  height: 100vh;
   background: #000000;
 }
+
 body {
-  background-color: black; /* Change to your desired background color */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background-color: black;
 }
 
-.play-games{
+.play-games {
   text-align: center;
   color: white;
 }
+
 .content {
   padding: 20px;
 }
+
 .image-container {
   display: flex;
-  justify-content: center;
-  gap: 20px; /* Add spacing between images */
-  padding: 20px; /* Add padding to create space around the images */
-  background-color: rgb(28, 28, 28); /* Add background color to create the rounded rectangle */
-  border-radius: 10px; /* Add border-radius to create rounded corners */
+  justify-content: flex-start; /* Adjust as needed */
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(28, 28, 28);
+  border-radius: 10px;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  width: 100%; /* Adjust the width dynamically based on content */
 }
 
 .image-container img {
-  width: 300px; /* Adjust the width of the images */
+  width: 250px;
   height: auto;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow effect */
-  transition: box-shadow 0.3s ease; /* Add smooth transition */
-  border-radius: 10px; /* Ensure images have rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-radius: 10px;
+  animation: scroll 20s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); } /* Start position */
+  100% { transform: translateX(calc(-250px - 20px)); } /* End position */
 }
 
 .image-container img:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 img {
   width: 200px;
@@ -51,7 +61,7 @@ img {
   width: 100%;
   padding: 10px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -64,11 +74,11 @@ img {
 
 .overlay-text {
   position: absolute;
-  top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
+  top: 20px;
+  left: 20px;
   color: white;
   font-size: 12px;
-  z-index: 999; /* Ensure it's above the iframe */
+  z-index: 999;
 }
 
 .modal {
@@ -85,13 +95,13 @@ img {
 
 .modal iframe {
   width: 100%;
-  height: 77vh; /* Increase the height of the iframe */
+  height: 77vh;
   border: none;
 }
 
 .modal button {
   display: block;
-  margin: 0 auto; /* Center the button horizontally */
+  margin: 0 auto;
   padding: 10px 20px;
   background-color: #d32f2f;
   color: #fff;
@@ -109,22 +119,22 @@ img {
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  position: fixed; /* Fix the title bar at the top */
-  top: 0; /* Ensure the title bar starts at the top of the viewport */
-  width: 99%; /* Make the title bar span the full width of the viewport */
-  z-index: 1000; /* Ensure the title bar appears above other content */
+  position: fixed;
+  top: 0;
+  width: 99%;
+  z-index: 1000;
 }
 
 .logo {
   width: 100px;
   height: auto;
-  margin-right: auto; /* Move the logo to the top left */
+  margin-right: auto;
 }
 
 .navigation {
   margin-left: auto;
   padding: 10px;
-  font-size:larger;
+  font-size: larger;
 }
 
 .navigation a {
@@ -150,7 +160,7 @@ img {
 
 .episode-modal {
   position: fixed;
-  top: 20px; /* Adjust this value as needed */
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -159,7 +169,6 @@ img {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
-
 
 .episode-modal-buttons {
   display: flex;
@@ -180,8 +189,8 @@ img {
   background-color: #e0e0e0;
 }
 
-.close-button{
+.close-button {
   position: absolute;
-      top: 10px;
-      right: 5px;
+  top: 10px;
+  right: 5px;
 }
