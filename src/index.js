@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import image1 from './Images/wip.jpg';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -7,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 // Function to display a message if the device is mobile
 function displayMobileMessage() {
     const message = document.createElement('div');
-    message.textContent = "Sorry, this website is not optimized for mobile devices.";
+    message.textContent = "Sorry, this website is not optimized for mobile devices....Yet!";
     message.style.position = 'fixed';
     message.style.top = '50%';
     message.style.left = '50%';
@@ -17,6 +18,15 @@ function displayMobileMessage() {
     message.style.border = '2px solid black';
     message.style.borderRadius = '10px';
     message.style.zIndex = '9999';
+    // Creating and configuring the image
+    const image = document.createElement('img');
+    image.src = image1; // Provide the path to your image
+    image.style.width = '200px'; // Adjust the width as needed
+    image.style.height = 'auto'; // Maintain aspect ratio
+
+    // Appending the image to the message
+    message.appendChild(image);
+
     document.body.appendChild(message);
 }
 
