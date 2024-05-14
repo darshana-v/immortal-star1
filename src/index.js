@@ -1,33 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import image1 from './Images/wip.jpg';
 import './index.css';
-import App from './App';
+import AppRouter from './Router'; // Import the AppRouter component
 import reportWebVitals from './reportWebVitals';
 
 // Function to display a message if the device is mobile
 function displayMobileMessage() {
-    const message = document.createElement('div');
-    message.textContent = "Sorry, this website is not optimized for mobile devices....Yet!";
-    message.style.position = 'fixed';
-    message.style.top = '50%';
-    message.style.left = '50%';
-    message.style.transform = 'translate(-50%, -50%)';
-    message.style.background = 'white';
-    message.style.padding = '20px';
-    message.style.border = '2px solid black';
-    message.style.borderRadius = '10px';
-    message.style.zIndex = '9999';
-    // Creating and configuring the image
-    const image = document.createElement('img');
-    image.src = image1; // Provide the path to your image
-    image.style.width = '200px'; // Adjust the width as needed
-    image.style.height = 'auto'; // Maintain aspect ratio
+  const message = document.createElement('div');
+  message.textContent = "Sorry, this website is not optimized for mobile devices....Yet!";
+  message.style.position = 'fixed';
+  message.style.top = '50%';
+  message.style.left = '50%';
+  message.style.transform = 'translate(-50%, -50%)';
+  message.style.background = 'white';
+  message.style.padding = '20px';
+  message.style.border = '2px solid black';
+  message.style.borderRadius = '10px';
+  message.style.zIndex = '9999';
+// Creating and configuring the image
+const image = document.createElement('img');
+image.src = image1; // Provide the path to your image
+image.style.width = '200px'; // Adjust the width as needed
+image.style.height = 'auto'; // Maintain aspect ratio
 
-    // Appending the image to the message
-    message.appendChild(image);
+// Appending the image to the message
+message.appendChild(image);
 
-    document.body.appendChild(message);
+  document.body.appendChild(message);
 }
 
 // Check if the user agent indicates a mobile device
@@ -35,14 +35,15 @@ const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/
 
 // Check if the device is mobile and display the message
 if (isMobile) {
-    displayMobileMessage();
+  displayMobileMessage();
 } else {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(
+    ReactDOM.render(
         <React.StrictMode>
-            <App />
-        </React.StrictMode>
-    );
+          <AppRouter />
+        </React.StrictMode>,
+        document.getElementById('root')
+      );
+      
 }
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,3 +1,4 @@
+// Work in progress
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import image1 from './Images/hanselandgretel.png';
@@ -17,6 +18,22 @@ import EpisodeModal from './EpisodeModal';
 /* AWS Links that has got to work 
  { id: 1, url: image1, website: 'http://3.7.235.231:8080/' },
   { id: 2, url: image2, website: 'https://appstream2.us-east-2.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiQURNSU4iLCJleHBpcmVzIjoiMTcxNTQ1MDI1MSIsImF3c0FjY291bnRJZCI6IjczMDMzNTQ3NTE1NiIsInVzZXJJZCI6ImFkbWluIiwiY2F0YWxvZ1NvdXJjZSI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QiLCJmbGVldFJlZiI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QifQ%3D%3D&signature=0aXXuOrffG%2Bljz67Zl0LtPr3QVzTkeYpdzaYDFBI3mU%3D' } */
+
+/** Once the AWS stuff works, I will add the episode 1 HTML to the main app.js
+ *         <div className="play-games">
+          <h1>Episode 1: The Dark Mod</h1>
+          <div >
+    {imageTDM.map(imageTDM => (
+      <img
+        key={imageTDM.id}
+        src={imageTDM.url}
+        alt={`Image ${imageTDM.id}`}
+        onClick={() => handleClick(imageTDM.website)}
+      />
+    ))}
+</div>
+        </div>
+ */
 
 const images = [
   { id: 1, url: image1, website: 'https://www.crazygames.com/embed/gretel-and-hansel' },
@@ -114,19 +131,7 @@ const App = () => {
       <div className="main-content">
         <TrailerPlayer />
         <button className="play-button" onClick={handleEpisodeClick}>Waitlist Here!</button> 
-        <div className="play-games">
-          <h1>Episode 1: The Dark Mod</h1>
-          <div >
-    {imageTDM.map(imageTDM => (
-      <img
-        key={imageTDM.id}
-        src={imageTDM.url}
-        alt={`Image ${imageTDM.id}`}
-        onClick={() => handleClick(imageTDM.website)}
-      />
-    ))}
-</div>
-        </div>
+
         <div className="play-games">
           <h1>Check out these games while you're here!</h1>
         </div>

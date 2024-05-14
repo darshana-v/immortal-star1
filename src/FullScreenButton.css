@@ -1,0 +1,17 @@
+.fullscreen-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .fullscreen-button svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    stroke: #000000;
+  }
+  

@@ -25,6 +25,8 @@
     font-size: 35px;
     z-index: 1; /* Ensure it's above the video */
     pointer-events: auto; /* Enable pointer events for the overlay text */
+ -webkit-text-stroke-width: 2px; 
+-webkit-text-stroke-color: black;
   }
   .play-button {
     position: absolute;
