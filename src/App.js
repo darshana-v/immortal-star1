@@ -108,7 +108,7 @@ const App = () => {
       <TitleBar />
       <div className="main-content">
         <TrailerPlayer />
-        <button className="play-button" onClick={handleEpisodeClick}>Coming Soon!</button> 
+        <button className="play-button" onClick={handleEpisodeClick}>Waitlist Here!</button> 
         <div className="play-games">
           <h1>Check out these games while you're here!</h1>
         </div>
