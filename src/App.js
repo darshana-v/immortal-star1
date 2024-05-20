@@ -47,7 +47,7 @@ const images = [
   // Add more images here
 ];
 const imageTDM = [
-  { id: 1, url: image8, website: 'https://appstream2.us-east-2.aws.amazon.com/authenticate?parameters=eyJ0eXBlIjoiQURNSU4iLCJleHBpcmVzIjoiMTcxNTY2MDY5OSIsImF3c0FjY291bnRJZCI6IjczMDMzNTQ3NTE1NiIsInVzZXJJZCI6ImFkbWluIiwiY2F0YWxvZ1NvdXJjZSI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QiLCJmbGVldFJlZiI6ImltYWdlLWJ1aWxkZXIvRXhhbXBsZUltYWdlQnVpbGRlclRFc3QifQ%3D%3D&signature=d%2BDRMVui45fsY3Bl9EzApjyO0%2B3tZPkg53yrZJmZ6BY%3D' },
+  { id: 1, url: image8, website: 'https://guac.isgaming.club/#/client/NABjAG15c3Fs' },
 
   // Add more images here
 ];
@@ -170,6 +170,19 @@ const App = () => {
         handleClose={handleCloseEpisodeModal} 
         episode={selectedEpisode} 
       />
+       <div className="play-games">
+          <h1>Episode 1: The Dark Mod (Beta Testing)</h1>
+          <div >
+    {imageTDM.map(imageTDM => (
+      <img
+        key={imageTDM.id}
+        src={imageTDM.url}
+        alt={`Image ${imageTDM.id}`}
+        onClick={() => handleClick(imageTDM.website)}
+      />
+    ))}
+</div>
+        </div>
     </div>
   );
 };
