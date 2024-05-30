@@ -1,18 +1,19 @@
 // Work in progress
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import image1 from './Images/hanselandgretel.png';
-import image2 from './Images/shadowpresident.png';
-import image3 from './Images/hauntedschool.png';
-import image4 from './Images/writtenrealms.png';
-import image5 from './Images/kuzbass.jpg';
-import image6 from './Images/youarebeingwatched.png';
-import image7 from './Images/deadlandsurvival.png'
-import image8 from './Images/TDMEpisode1.jpg'
-import TitleBar from './TitleBar';
-import TrailerPlayer from './TrailerPlayer';
-import FullScreenButton from './FullScreenButton';
-import EpisodeModal from './EpisodeModal';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import image1 from "./Images/hanselandgretel.png";
+import image2 from "./Images/shadowpresident.png";
+import image3 from "./Images/hauntedschool.png";
+import image4 from "./Images/writtenrealms.png";
+import image5 from "./Images/kuzbass.jpg";
+import image6 from "./Images/youarebeingwatched.png";
+import image7 from "./Images/deadlandsurvival.png";
+import image8 from "./Images/TDMEpisode1.jpg";
+import image9 from "./Images/roguish.jpeg";
+import TitleBar from "./TitleBar";
+import TrailerPlayer from "./TrailerPlayer";
+import FullScreenButton from "./FullScreenButton";
+import EpisodeModal from "./EpisodeModal";
 
 // Import other components and images here
 /* AWS Links that has got to work 
@@ -36,18 +37,52 @@ import EpisodeModal from './EpisodeModal';
  */
 
 const images = [
-  { id: 1, url: image1, website: 'https://www.crazygames.com/embed/gretel-and-hansel' },
-  { id: 2, url: image2, website: 'https://www.crazygames.com/embed/shadow-president-illuminati' },
-  { id: 3, url: image3, website: 'https://www.crazygames.com/embed/haunted-school---horror-game' },
-  { id: 4, url: image4, website: 'https://writtenrealms.com/game' },
-  { id: 5, url: image5, website: 'https://www.crazygames.com/embed/kuzbass-horror' },
-  { id: 6, url: image6, website: 'https://www.crazygames.com/embed/you-are-being-watched---horror-game' },
-  { id: 7, url: image7, website: 'https://www.crazygames.com/embed/dead-land-survival' },
-  
+  {
+    id: 1,
+    url: image1,
+    website: "https://www.crazygames.com/embed/gretel-and-hansel",
+  },
+  {
+    id: 2,
+    url: image2,
+    website: "https://www.crazygames.com/embed/shadow-president-illuminati",
+  },
+  {
+    id: 3,
+    url: image3,
+    website: "https://www.crazygames.com/embed/haunted-school---horror-game",
+  },
+  { id: 4, url: image4, website: "https://writtenrealms.com/game" },
+  {
+    id: 5,
+    url: image5,
+    website: "https://www.crazygames.com/embed/kuzbass-horror",
+  },
+  {
+    id: 6,
+    url: image6,
+    website:
+      "https://www.crazygames.com/embed/you-are-being-watched---horror-game",
+  },
+  {
+    id: 7,
+    url: image7,
+    website: "https://www.crazygames.com/embed/dead-land-survival",
+  },
+  {
+    id: 8,
+    url: image9,
+    website: "http://3.7.235.231:8081/",
+  },
+
   // Add more images here
 ];
 const imageTDM = [
-  { id: 1, url: image8, website: 'https://guac.isgaming.club/#/client/NABjAG15c3Fs' },
+  {
+    id: 1,
+    url: image8,
+    website: "https://guac.isgaming.club/#/client/NABjAG15c3Fs",
+  },
 
   // Add more images here
 ];
@@ -70,10 +105,12 @@ const App = () => {
   };
 
   const toggleFullScreen = () => {
-    const elem = document.getElementById('resizableModal');
+    const elem = document.getElementById("resizableModal");
     if (elem && !document.fullscreenElement) {
-      elem.requestFullscreen().catch(err => {
-        console.log(`Error attempting to enable full-screen mode: ${err.message}`);
+      elem.requestFullscreen().catch((err) => {
+        console.log(
+          `Error attempting to enable full-screen mode: ${err.message}`
+        );
       });
       setIsFullScreen(true); // Set isFullScreen state to true
     } else {
@@ -94,25 +131,28 @@ const App = () => {
 
   useEffect(() => {
     const initializeResizableModal = () => {
-      const modal = document.getElementById('resizableModal');
+      const modal = document.getElementById("resizableModal");
       if (modal) {
         let isResizing = false;
         let lastDownX = 0;
 
-        modal.addEventListener('mousedown', (e) => {
-          if (e.target.classList.contains('modal')) {
+        modal.addEventListener("mousedown", (e) => {
+          if (e.target.classList.contains("modal")) {
             isResizing = true;
             lastDownX = e.clientX;
           }
         });
 
-        window.addEventListener('mousemove', (e) => {
+        window.addEventListener("mousemove", (e) => {
           if (!isResizing) return;
-          modal.style.width = parseInt(getComputedStyle(modal, '').width) + (e.clientX - lastDownX) + 'px';
+          modal.style.width =
+            parseInt(getComputedStyle(modal, "").width) +
+            (e.clientX - lastDownX) +
+            "px";
           lastDownX = e.clientX;
         });
 
-        window.addEventListener('mouseup', () => {
+        window.addEventListener("mouseup", () => {
           isResizing = false;
         });
       }
@@ -130,22 +170,24 @@ const App = () => {
       <TitleBar />
       <div className="main-content">
         <TrailerPlayer />
-        <button className="play-button" onClick={handleEpisodeClick}>Waitlist Here!</button> 
+        <button className="play-button" onClick={handleEpisodeClick}>
+          Waitlist Here!
+        </button>
 
         <div className="play-games">
           <h1>Check out these games while you're here!</h1>
         </div>
         <div className="content">
-        <div className="image-container">
-    {images.map(image => (
-      <img
-        key={image.id}
-        src={image.url}
-        alt={`Image ${image.id}`}
-        onClick={() => handleClick(image.website)}
-      />
-    ))}
-</div>
+          <div className="image-container">
+            {images.map((image) => (
+              <img
+                key={image.id}
+                src={image.url}
+                alt={`Image ${image.id}`}
+                onClick={() => handleClick(image.website)}
+              />
+            ))}
+          </div>
         </div>
       </div>
       {showModal && (
@@ -159,30 +201,32 @@ const App = () => {
               style={{ height: isFullScreen ? "95vh" : "77vh" }} // Set iframe height based on isFullScreen state
             ></iframe>
             <div className="modal-buttons">
-              <button className="close-button" onClick={handleCloseModal}>X</button>
+              <button className="close-button" onClick={handleCloseModal}>
+                X
+              </button>
               <FullScreenButton handleClick={toggleFullScreen} />
             </div>
           </div>
         </div>
       )}
-      <EpisodeModal 
-        isOpen={showEpisodeModal} 
-        handleClose={handleCloseEpisodeModal} 
-        episode={selectedEpisode} 
+      <EpisodeModal
+        isOpen={showEpisodeModal}
+        handleClose={handleCloseEpisodeModal}
+        episode={selectedEpisode}
       />
-       <div className="play-games">
-          <h1>Episode 1: The Dark Mod (Beta Testing)</h1>
-          <div >
-    {imageTDM.map(imageTDM => (
-      <img
-        key={imageTDM.id}
-        src={imageTDM.url}
-        alt={`Image ${imageTDM.id}`}
-        onClick={() => handleClick(imageTDM.website)}
-      />
-    ))}
-</div>
+      {/* <div className="play-games">
+        <h1>Episode 1: The Dark Mod (Beta Testing)</h1>
+        <div>
+          {imageTDM.map((imageTDM) => (
+            <img
+              key={imageTDM.id}
+              src={imageTDM.url}
+              alt={`Image ${imageTDM.id}`}
+              onClick={() => handleClick(imageTDM.website)}
+            />
+          ))}
         </div>
+      </div> */}
     </div>
   );
 };
